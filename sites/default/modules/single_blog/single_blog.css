@@ -1,0 +1,8 @@
+.block-single-blog .content ul{
+  padding-left: 0;
+}
+
+.block-single-blog .content ul li{
+  margin-bottom: 10px;
+  list-style-type: none;
+}

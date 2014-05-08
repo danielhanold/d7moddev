@@ -76,6 +76,9 @@ function single_blog_block_view($delta) {
       }
 
       if (!empty($items)) {
+        // Add CSS file in render array.
+        $block['content']['#attached']['css'][] = drupal_get_path('module', 'single_blog') . '/single_blog.css';
+
         // Theme the list of block entries using a render array.
         $block['content']['list'] = array(
           '#theme' => 'item_list__single_blog',
@@ -92,6 +95,7 @@ function single_blog_block_view($delta) {
       else {
         $block['content'] = 'Nothing to display.';
       }
+      dpm($block);
     }
   }
 
